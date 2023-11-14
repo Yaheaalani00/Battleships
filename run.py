@@ -123,13 +123,11 @@ def update_grid(row, col):
 
     if hit_ship:
         print('Hit!')
-        print(f'Before: {hit_ship}')
         hit_ship.remove((row, col))
         grid[row][col] = 'X'
         if not hit_ship:
             print('You sunk a ship!')
             num_of_ships_sunk += 1
-            print('After:', ship_positions)
             ship_positions.remove(hit_ship)
     else:
         print('Miss!')
