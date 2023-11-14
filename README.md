@@ -1,31 +1,70 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships Game
 
-Welcome USER_NAME,
+Battleships is a classic command-line implementation of the Battleship game in Python. The game randomly places ships on an 8x8 grid, and the player takes shots to sink all the ships within a limited number of bullets.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## Features
 
-## Reminders
+- Random placement of ships on the grid.
+- Interactive gameplay with the user taking shots on the grid.
+- Informative display of the grid, remaining ships, and game status.
+- End-of-game messages indicating victory or defeat.
+- Option to play the game again after completion.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
+## Gameplay
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+- The grid is displayed with row and column indices for user input.
+- Enter the row and column numbers when prompted to take a shot.
+- Valid shots are marked as 'X,' and misses are marked as 'M.'
+- Sink all the ships within the specified number of bullets to win.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Game Structure
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+The game is structured into modular functions, including:
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- `place_ships()`: Randomly places ships on the grid.
+- `display_ships_remaining()`: Prints the remaining ships.
+- `display_grid()`: Displays the current state of the grid.
+- `take_shot()`: Allows the user to take shots on the grid.
+- `update_grid(row, col)`: Updates the grid based on the user's shot.
+- `check_game_over()`: Checks if the game is over based on the number of sunk ships and remaining bullets.
+- `reset_game()`: Resets the game for a new session.
+- `play_battleships()`: The main function to execute the game.
 
-Connect your GitHub repository and deploy as normal.
+## Deployment
 
-## Constraints
+*Create a New Heroku App**:
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+   - Log in to your Heroku account.
+   - In the Heroku Dashboard, click the "New" button, then select "Create new app."
+   - Choose a unique name for your app and click "Create App."
 
------
-Happy coding!
+3. **Connect to GitHub**:
+
+   - In the Heroku Dashboard, navigate to the "Deploy" tab.
+   - In the "Deployment method" section, choose "GitHub."
+   - Connect your Heroku app to your GitHub repository by searching for the repository name and clicking "Connect."
+
+
+5. **Deploy Branch (Below automatic deploys)**:
+
+
+6. **Open the App**:
+
+   - Once the deployment is successful, click the "Open App" button in the top right corner of the Heroku Dashboard.
+
+7. **Play the Game**:
+
+   - Your Battleships game should now be accessible online via the Heroku app URL.
+
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- This project is inspired by the classic Battleship game.
+
+Feel free to customize this README file based on your project's specific details and requirements.
+
