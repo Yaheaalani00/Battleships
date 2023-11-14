@@ -58,13 +58,8 @@ The game is structured into modular functions, including:
    - Your Battleships game should now be accessible online via the Heroku app URL.
 
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Acknowledgments
 
 - This project is inspired by the classic Battleship game.
 
-Feel free to customize this README file based on your project's specific details and requirements.
 
